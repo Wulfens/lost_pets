@@ -1,0 +1,13 @@
+<h1>Pets#show</h1>
+
+
+<h3>Name: <%= @pet.name %></h3>
+
+<p>Found on: <%= @pet.found_on %></p>
+<p> Address: <%= @pet.address %></p>
+<p>Species: <%= @pet.species %></p>
+
+
+<%= link_to "Back", pets_path %> |
+<%= link_to "Edit", edit_pet_path(@pet) %> |
+<%= link_to "Delete", pet_path(@pet), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
